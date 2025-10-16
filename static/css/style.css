@@ -1,0 +1,95 @@
+/* File Path: Disaster_ML_Fusion/static/css/style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+
+header {
+    background-color: #1abc9c; /* Teal/Turquoise */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.container {
+    display: flex;
+    height: 94vh; /* Use most of the viewport height */
+}
+
+/* Map Styling */
+#map {
+    flex: 3; /* Map takes up 75% */
+    height: 100%;
+    border-right: 1px solid #ddd;
+}
+
+/* Sidebar Styling */
+#sidebar {
+    flex: 1; /* Sidebar takes up 25% */
+    background-color: white;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    overflow-y: auto;
+}
+
+#sidebar h2, #sidebar h3 {
+    color: #34495e; /* Dark Gray/Blue */
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 8px;
+    margin-top: 15px;
+}
+
+/* Form and Output Styling */
+#prediction-output, #risk-form {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Prediction Text */
+#risk-level {
+    font-weight: bold;
+    font-size: 1.2em;
+    /* Color set dynamically by JS */
+}
+
+/* Custom Marker Styling for ML Prediction */
+.risk-icon {
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    opacity: 0.95;
+    color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.risk-icon.red { background-color: #e74c3c; /* High Risk */ }
+.risk-icon.green { background-color: #2ecc71; /* Low Risk */ }
+
+/* Custom Marker Styling for Historical Events */
+.history-icon {
+    font-size: 12px;
+    color: white;
+    opacity: 0.6;
+}
+.history-icon.red { color: #e74c3c; } /* High Severity Event */
+.history-icon.orange { color: #f39c12; } /* Lower Severity Event */
+
+/* Legend Dots */
+.severity-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.severity-dot.high { background-color: #e74c3c; }
+.severity-dot.low { background-color: #f39c12; }
